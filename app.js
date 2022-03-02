@@ -51,4 +51,5 @@ function getResult() {
     if (computerChoice === 'paper' && userChoice === 'scissors') {
         result = 'Im literally a computer, how are you winning dude.'
     }
+    actualResultDisplay.innerHTML = result
 }
