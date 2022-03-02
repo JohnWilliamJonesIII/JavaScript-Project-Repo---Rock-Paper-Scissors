@@ -1,13 +1,15 @@
 const computerChoiceDisplay = document.getElementById('computer-choice')
 const userChoiceDisplay = document.getElementById('user-choice')
-const actualResultDisplay = document.getElementById('result')
+const resultDisplay = document.getElementById('result')
 const possibleChoices = document.querySelectorAll('button')
 let userChoice
+let computerChoice
 
 possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
     userChoice = e.target.id
     userChoiceDisplay.innerHTML = userChoice
     generateComputerChoice()
+    getResult()
 
 }))
 
@@ -51,5 +53,5 @@ function getResult() {
     if (computerChoice === 'paper' && userChoice === 'scissors') {
         result = 'Im literally a computer, how are you winning dude.'
     }
-    actualResultDisplay.innerHTML = result
+    resultDisplay.innerHTML = result
 }
